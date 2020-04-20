@@ -10,7 +10,7 @@ public class ProjectDetails {
 	@Test
 	public void projectDetails() {
 		RestAssured.baseURI="http://localhost:8090/";
-		Response res=given().auth().preemptive().basic("YashaswiniS", "jira1@345").
+		Response res=given().auth().preemptive().basic("username", "password").
 				when().
 			    get("/rest/api/2/issue/createmeta").
 			    then().assertThat().
