@@ -13,7 +13,7 @@ public class CycleTime {
 	@Test
 	public void cycleTime() throws ParseException {
 		RestAssured.baseURI="http://localhost:8090/";
-		Response res=given().auth().preemptive().basic("YashaswiniS", "jira1@345").
+		Response res=given().auth().preemptive().basic("Username", "password").
 				when().
 			    get("/rest/api/2/issue/10206?expand=changelog").
 			    then().assertThat().
